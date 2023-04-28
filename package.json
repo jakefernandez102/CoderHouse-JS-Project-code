@@ -1,0 +1,16 @@
+{
+  "name": "preentrega1_jakefernandezb",
+  "version": "1.0.0",
+  "description": "This is my second sprint",
+  "main": "index.js",
+  "types": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jake Fernandez",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-imagemin": "^7.1.0"
+  }
+}

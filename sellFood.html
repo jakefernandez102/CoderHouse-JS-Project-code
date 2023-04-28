@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <title>Primera Entrega</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="src/css/styles.css">
+</head>
+<body>
+    
+    <header class="header">
+
+        <div class="header__barra">
+            
+            <a href="index.html" class="text-decoration-none">
+                <div class="header__logo">
+                    <img  class="header__image" src="built/img/Restaurant_Logo.svg" alt="Logo image">
+                    <h1>Monchis<span>App</span></h1>
+                </div>
+            </a>
+
+            <div class="header__navegacion">
+                <nav class="navegacion">
+                    <a class="navegacion__link" href="index.html">Home</a>
+                    <a class="navegacion__link" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" id="sell-food"  href="#">Sell Food</a>
+                    <a class="navegacion__link" id="order-food" href="#">Order food</a>
+                    <a class="navegacion__link" id="signin" href="#">sign in</a>
+                </nav>
+            </div>
+
+        </div>
+
+    </header>
+
+    <div class="container tabla">
+        <table class="table text-white">
+            <thead>
+                <tr>
+                    <th scope="col">ID #</th>
+                    <th scope="col">Prod. Name</th>
+                    <th scope="col">Restaurant</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Inventory</th>
+                </tr>
+            </thead>
+            <tbody id="tbody-prod">
+                <!-- <tr>
+                    <th scope="row">1</th>
+                    <td>Juice</td>
+                    <td>MonchisApp</td>
+                    <td>10</td>
+                    <td>100</td>
+                </tr> -->
+
+            </tbody>
+        </table>
+    </div>
+    <div id="myModal"></div>
+    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+
+            <div class="modal-content">
+                
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Sell Food</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                
+                <div class="modal-body">
+                    <h3>Welcome to Selling in MonchisApp</h3>
+                    <hr>
+                    <p>Here you can sell all your delicious food, just have to know some conditions.</p>
+
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            We reserve all rights of selling.
+                        </li>
+                        <li class="list-group-item">
+                            We will charge 10% of the total amount sold.
+                        </li>
+                        <li class="list-group-item">
+                            We want you to grow with us.
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="modal-footer">
+                    <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Add Products</button>
+                </div>
+
+            </div>
+        </div>
+        </div>
+        <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Add Products</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    
+                    <form id="formularioProductos">
+                        <div class="mb-3">
+                            <label for="name-prod" class="form-label">Product Name:</label>
+                            <input type="text" class="form-control" id="name-prod" aria-describedby="name"
+                            placeholder="Product Name">
+                            <div id="name-prod" class="form-text">As bread, chicken, Coffee...</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="restaurant" class="form-label">Restaurant</label>
+                            <input type="text" class="form-control" placeholder="Restaurant Name" id="restaurant" disabled>
+                        </div>
+                        
+
+                        <div class="mb-3">
+                            <label for="price-prod" class="form-label">Price</label>
+                            <input type="number" class="form-control" placeholder="$ Price" id="price-prod">
+                        </div>
+                        
+
+                        <div class="mb-3">
+                            <label for="inventory-prod" class="form-label">Invetory</label>
+                            <input type="number" class="form-control" placeholder="Quantity of product" id="inventory-prod">
+                        </div>
+                        
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Accept Terms</label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+
+                </div>
+                
+                <div class="modal-footer">
+                    <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Back to first</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+    <script src="./src/js/products.js" type="module"></script>
+    <script src="./src/js/app.js" type="module"></script>
+</body>
+</html>
